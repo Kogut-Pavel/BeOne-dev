@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span class="current">Корзина</span>
+            </div>
+        </div>
+        <section class="cart">
+            <div class="container">
+                
+                <h2 class="visually-hidden">Корзина</h2>
+
+
+                <ul class="cart__list">
+                    <li class="cart__item">
+                        <a href="#" class="cart__item-left">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/be-one-white-gold-big.jpg" alt="#">
+                            <div class="cart__item-info">
+                                <h3 class="cart__item-title">BE ONE WHITE gold</h3>
+                                <div class="cart__item-price-block">
+                                    <span class="sale">-30%</span>
+                                    <span class="cart__item-old-price">6 900 р.</span>
+                                    <span class="cart__item-current-price">4 990 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="cart__item-right">
+                            <div class="counter">
+                                <button type="button" class="counter-btn counter-minus">-</button>
+                                <span class="counter-number">1</span>
+                                <button type="button" class="counter-btn counter-plus">+</button>
+                            </div>
+    
+                            <div class="cart__item-price">
+                                4 990 ₽
+                            </div>
+                            <button class="cart__item-delete-button">
+                                <svg class="icon icon--trash">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        
+                    </li>
+                    <li class="cart__item">
+                        <a href="#" class="cart__item-left">
+                            <img src="../img/catalog/BE ONE MONSTER TURQUOISE/WHITE.jpg" alt="#">
+                            <div class="cart__item-info">
+                                <h3 class="cart__item-title">BE ONE MONSTER 
+                                    TURQUOISE/WHITE</h3>
+                                <div class="cart__item-price-block">
+                                    <span class="cart__item-current-price">5 690 ₽</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="cart__item-right">
+                            <div class="counter">
+                                <button type="button" class="counter-btn counter-minus">-</button>
+                                <span class="counter-number">1</span>
+                                <button type="button" class="counter-btn counter-plus">+</button>
+                            </div>
+    
+                            <div class="cart__item-price">
+                                5 690 ₽
+                            </div>
+                            <button class="cart__item-delete-button">
+                                <svg class="icon icon--trash">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        
+                    </li>
+                </ul>
+                
+                <div class="cart__footer">
+                    <div class="cart__total">
+                        <span>Итого:</span>
+                        <span>10 780 ₽</span>
+                    </div>
+
+                    <a href="order.html" class="cart__order-button">Оформить заказ</a>
+                </div>
+
+            </div>
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

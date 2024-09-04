@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span class="current">Контакты</span>
+            </div>
+        </div>
+
+        <section class="contacts-page">
+            <div class="container">
+                <h2 class="contacts-page__title">
+                    <span>контакты</span>
+                    <img src="../img/contacts/ball.svg" alt="#">
+                    <span>be one</span>
+                </h2>
+
+                <div class="contacts-page__text">
+                    <p>Мы работаем ежедневно<br>
+                        с 10-00 до 21:00</p>
+                </div>
+                <div class="contacts-page__image">
+                    <img src="../img/contacts/image.jpg" alt="#">
+                </div>
+
+                <ul class="contacts-page__list">
+                    <li>
+                        <div class="contacts-page__list__name">Адрес</div>
+                        <div class="contacts-page__list__value">Самарская область, город Самара</div>
+                    </li>
+                    <li>
+                        <div class="contacts-page__list__name">Время работы</div>
+                        <div class="contacts-page__list__value">ежедневно 10:00–21:00</div>
+                    </li>
+                    <li>
+                        <div class="contacts-page__list__name">телефон</div>
+                        <div class="contacts-page__list__value">
+                            <a href="tel:+79879855129">+7 (987) 985-51-29</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contacts-page__list__name">E-mail</div>
+                        <div class="contacts-page__list__value">
+                            <a href="mailto:beone_1@yandex.ru">beone_1@yandex.ru</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        @@include('blocks/information.html')
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

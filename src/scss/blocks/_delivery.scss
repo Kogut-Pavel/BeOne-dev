@@ -1,0 +1,208 @@
+.delivery .section-header {
+    margin-top: 65px;
+    @include mediaLaptop {
+        margin-top: 50px;
+    }
+    @include mediaTablet {
+        margin-top: 45px;
+    }
+    @include mediaMobile {
+        margin-bottom: 11px;
+        gap: 13px;
+    }
+}
+
+.delivery__image {
+    padding: 10px 0;
+
+    border-top: 0.5px solid var(--linii);
+    border-bottom: 0.5px solid var(--linii);
+    img {
+        width: 100%;
+        max-height: 170px;
+        @include mediaMobile {
+            height: 48px;
+        }
+    }
+}
+
+.delivery__top p {
+    padding: 10px 0;
+    max-width: 895px;
+    margin-left: auto;
+    text-indent: 35%;
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 94%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    @include mediaLaptop {
+        font-size: 14px;
+        letter-spacing: normal;
+        line-height: 111%;
+    }
+}
+
+.delivery__inner {
+    position: relative;
+    padding: 10px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'image image text-1 text-2'
+        'image image text-3 text-3'
+        'image image cost cost';
+    gap: 20px;
+
+    border-top: 0.5px solid var(--linii);
+    border-bottom: 0.5px solid var(--linii);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 0.5px;
+        background: var(--linii);
+    }
+    @include mediaLaptop {
+        align-items: stretch;
+        grid-template-areas:
+            'image image text-1 text-1'
+            'image image text-2 text-2'
+            'image image . .'
+            'text-3 text-3 cost cost';
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    @include mediaMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        &::before {
+            content: none;
+        }
+    }
+}
+
+.delivery__inner-img {
+    grid-area: image;
+    max-height: 433px;
+    @include mediaMobile {
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.delivery__text-1 {
+    grid-area: text-1;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 111%;
+    color: var(--belyy);
+    @include mediaMobile {
+        margin-bottom: 10px;
+    }
+}
+.delivery__text-2 {
+    grid-area: text-2;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--belyy);
+    @include mediaMobile {
+        margin-bottom: 10px;
+        padding: 10px 0;
+        border-top: 0.5px solid var(--linii);
+        border-bottom: 0.5px solid var(--linii);
+    }
+    a {
+        color: var(--biryuza);
+    }
+}
+.delivery__text-3 {
+    grid-area: text-3;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    @include mediaLaptop {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: normal;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: calc(100% + 10px);
+            height: 0.5px;
+            background-color: var(--linii);
+        }
+    }
+    @include mediaMobile {
+        margin-left: 15px;
+        margin-bottom: 15px;
+        &::before {
+            content: none;
+        }
+    }
+    a {
+        color: var(--biryuza);
+    }
+}
+
+.delivery__cost {
+    grid-area: cost;
+
+    max-width: calc(50% - 10px);
+    height: fit-content;
+    align-self: flex-end;
+    padding: 8px 35px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 111%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy);
+    border: 1px solid var(--linii);
+    @include mediaLaptop {
+        max-width: 75%;
+        position: relative;
+        align-self: auto;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: calc(100% + 34% + 10px);
+            height: 0.5px;
+            background-color: var(--linii);
+        }
+    }
+    @include mediaTablet {
+        max-width: 100%;
+        padding: 8px 15px;
+        &::before {
+            width: calc(100% + 10px);
+        }
+    }
+    @include mediaMobile {
+        &::before {
+            content: none;
+        }
+    }
+}

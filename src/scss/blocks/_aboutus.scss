@@ -1,0 +1,223 @@
+.aboutus__inner {
+    // padding: 11px 0;
+    // border-top: 0.50px solid var(--linii);
+    // position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        'small-text big-text big-text big-text'
+        'small-text image image image'
+        'empty text-1 text-2 link';
+    // gap: 20px;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 0.5px;
+    //     background: var(--linii);
+    // }
+
+    @include mediaLaptop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'big-text big-text'
+            'image image'
+            'text-1 text-2'
+            'small-text link';
+    }
+    @include mediaMobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.aboutus__big-text {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-indent: 36%;
+
+    padding: 10px;
+    padding-top: 20px;
+    padding-right: 0;
+    border: 0.5px solid var(--linii);
+    border-left: 0;
+    border-right: 0;
+
+    grid-area: big-text;
+
+    @include mediaLaptop {
+        padding: 10px 0;
+    }
+    @include mediaMobile {
+        font-family: var(--font-family);
+        font-size: 14px;
+        text-align: center;
+        text-indent: 0%;
+    }
+}
+.aboutus__small-text {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--belyy);
+
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 0;
+    border: 0.5px solid var(--linii);
+    border-left: 0;
+
+    grid-area: small-text;
+
+    img {
+        display: none;
+    }
+    &--mobile {
+        display: none;
+    }
+
+    @include mediaLaptop {
+        display: block;
+        padding: 10px 10px 0 0;
+        font-size: 18px;
+        border-top: 0;
+        border-bottom: 0;
+    }
+    @include mediaMobile {
+        display: none;
+        &--mobile {
+            display: block;
+            border: 0;
+            padding: 0;
+            margin-bottom: 20px;
+            width: 231px;
+            height: 46px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.aboutus__image {
+    height: 332px;
+    max-width: 895px;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0;
+    border-bottom: 0.5px solid var(--linii);
+    object-fit: cover;
+
+    grid-area: image;
+
+    @include mediaLaptop {
+        max-width: 100%;
+        height: 267px;
+        padding-left: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    @include mediaMobile {
+        height: 200px;
+        padding: 10px 0;
+        border-bottom: 0.5px solid var(--linii);
+        margin-bottom: 20px;
+    }
+}
+.aboutus__empty {
+    padding: 10px;
+    border-right: 0.5px solid var(--linii);
+
+    grid-area: empty;
+
+    @include mediaLaptop {
+        display: none;
+    }
+}
+.aboutus__text {
+    font-family: var(--second-family);
+    font-size: 14px;
+
+    padding: 10px;
+
+    &--mobile {
+        display: none;
+    }
+
+    @include mediaMobile {
+        display: none;
+        &--mobile {
+            display: block;
+            padding: 0;
+        }
+    }
+}
+
+.aboutus__text.text-1 {
+    border-right: 0.5px solid var(--linii);
+
+    grid-area: text-1;
+
+    @include mediaLaptop {
+        padding-left: 0;
+        border-bottom: 0.5px solid var(--linii);
+    }
+
+    @include mediaMobile {
+        max-width: 85%;
+        margin-bottom: 10px;
+        border: 0;
+    }
+}
+.aboutus__text.text-2 {
+    border-right: 0.5px solid var(--linii);
+
+    grid-area: text-2;
+
+    @include mediaLaptop {
+        padding-right: 0;
+        border-right: 0;
+        border-bottom: 0.5px solid var(--linii);
+    }
+    @include mediaMobile {
+        padding-left: 14px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.aboutus__text.text-3 {
+    @include mediaMobile {
+        padding-left: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+.aboutus__link {
+    max-width: fit-content;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    grid-area: link;
+
+    @include mediaLaptop {
+        padding-bottom: 0;
+    }
+    @include mediaMobile {
+        padding: 0;
+        margin-left: auto;
+    }
+}

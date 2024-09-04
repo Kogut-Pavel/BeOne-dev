@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span>Категории</span>
+                <span class="current">Вратарские перчатки</span>
+            </div>
+        </div>
+        <section class="catalog catalog-page">
+            <div class="container">
+                
+                <h2 class="visually-hidden">Каталог</h2>
+                
+                <p class="promo-text">Стиль. Качество.
+                    комфорт.</p>
+                
+                <div class="catalog__filter">
+                    
+                    <div class="catalog__tabs-row-top">
+                        <button type="button" class="sizes" data-modal="sizes">Размерная сетка</button>
+
+                        <ul>
+                            <li class="active" data-tab="goalkeeper-gloves">Вратарские перчатки</li>
+                            <li data-tab="t-shirt">Майки</li>
+                            <li data-tab="bags">Сумки</li>
+                            <li data-tab="balls">Мячи</li>
+                        </ul>
+                    </div>
+
+                    <div class="catalog__tabs-row-bottom">
+                        <ul>
+                            <li class="active" onclick="filterSelection('all')">Все</li>
+                            <li onclick="filterSelection('child')">Детские</li>
+                            <li onclick="filterSelection('adult')">взрослые</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="catalog__tabs-row-bottom none">
+                        <ul>
+                            <li class="active">Все</li>
+                            <li>Детские</li>
+                            <li>взрослые</li>
+                        </ul>
+                    </div> -->
+
+                </div>
+                
+                <div class="catalog-block__list" data-tab-content id="goalkeeper-gloves"> 
+                    <ul class="swiper-wrapper">
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE MONSTER TURQUOISE WHITE 3.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE MONSTER 
+                                    TURQUOISE/WHITE (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button" data-modal="authorization">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE WHITE GOLD 1.png" alt="#">
+                                <a href="be-one-white-gold.html" class="card__title">BE ONE WHITE GOLD
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE SNOW.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE SNOW
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE MONSTER TURQUOISEWHITE.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE MONSTER 
+                                    TURQUOISE/WHITE (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE PRO WhiteBlue.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE PRO White/Blue
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/Monster Pink and Black.png" alt="#">
+                
+                                <a href="#" class="card__title">Monster Pink and Black
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE SSO WHITE.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE SSO WHITE 
+                                    (детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card card-image swiper-slide">
+                            <img src="../../img/catalog/decor-image-1.png" alt="">
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE PRO Blue.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE PRO Blue
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE SSO BLACK.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE SSO BLACK 
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog-block__list none" data-tab-content id="t-shirt"> 
+                    <ul class="swiper-wrapper">
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE MONSTER TURQUOISE WHITE 3.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE MONSTER 
+                                    TURQUOISE/WHITE (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button" data-modal="authorization">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE WHITE GOLD 1.png" alt="#">
+                                <a href="be-one-white-gold.html" class="card__title">BE ONE WHITE GOLD
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog-block__list none" data-tab-content id="bags">      
+                    <ul class="swiper-wrapper">
+                    </ul>
+                </div>
+                <div class="catalog-block__list none" data-tab-content id="balls"> 
+                    <ul class="swiper-wrapper">
+                        <li class="card card-image swiper-slide">
+                            <img src="../../img/catalog/decor-image-1.png" alt="">
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE PRO Blue.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE PRO Blue
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card swiper-slide">
+                            <div class="card__inner">
+                                <button class="card__favourites-button">
+                                    <svg class="icon icon--heart icon--heart-blue">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <img class="card__image" src="../../img/catalog/BE ONE SSO BLACK.png" alt="#">
+                
+                                <a href="#" class="card__title">BE ONE SSO BLACK 
+                                    (+детские)
+                                </a>
+                
+                                <div class="card__footer">
+                
+                                    <div class="card__price">
+                                        <span class="card__sale">-30%</span>
+                                        <span class="card__old-price">5 690 ₽</span>
+                                        <span class="card__new-price">4 690 ₽</span>
+                                    </div>
+                
+                                    <button class="card__cart-button">
+                                        <svg class="icon icon--cart icon--cart-black">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                        </svg>
+                                    </button>
+                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+    @@include('blocks/modals.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

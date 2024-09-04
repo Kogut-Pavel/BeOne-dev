@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span class="current">категории</span>
+            </div>
+        </div>
+        <section class="categories">
+            <div class="container">
+                
+                <h2 class="visually-hidden">Категории</h2>
+                
+                <p class="promo-text">Воплотите свои мечты вместе с be one</p>
+
+
+                <div class="categories__texts">
+                    <p class="top-text">“Мы стремимся предложить нашим клиентам товары, которые сочетают в себе прочность, комфорт, надежность и эстетическое оформление”</p>
+
+                    <div class="bottom-text">
+                        <p class="">В ассортименте компании Вы найдете различные модели и размеры, предназначенные для разных уровней игры — от начинающих до профессионалов. Компания может предложить товары как для детей, так и для взрослых.</p>
+                    </div>
+                </div>
+
+                <div class="categories__inner">
+                    <div class="categories__card card-1">
+                        <img src="../img/categories/maiki.jpg" alt="#">
+                        <a href="#">Майки</a>
+                    </div>
+                    <div class="categories__card card-2">
+                        <img src="../img/categories/sumki.jpg" alt="#">
+                        <a href="#">Сумки</a>
+                    </div>
+                    <div class="categories__card card-3">
+                        <img src="../img/categories/myachi.jpg" alt="#">
+                        <a href="#">Мячи</a>
+                    </div>
+                    <div class="categories__card card-5">
+                        <img src="../img/categories/detskii-assort-2.jpg" alt="#">
+                        <a href="#">Детский ассортимент</a>
+                    </div>
+                    <div class="categories__card card-6">
+                        <img class="big" src="../img/categories/vratarskie-perchatki-big.jpg" alt="#">
+                        <a href="#">Вратарские перчатки</a>
+                    </div>
+                    <div class="categories__card card-7">
+                        <img src="../img/categories/detskie-perchatki.jpg" alt="#">
+                        <a href="#">Детские вратарские перчатки</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

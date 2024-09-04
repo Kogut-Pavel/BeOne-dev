@@ -1,0 +1,40 @@
+html {
+	scroll-behavior: smooth;
+	background-color: rgb(39, 39, 39);
+}
+
+body {
+	background: var(--osnovnoy-cvet);
+	color: var(--belyy);
+	line-height: 111%;
+	font-family: var(--font-family);
+	// text-wrap: balance;
+}
+
+img {
+	display: block;
+}
+
+a {
+	color: var(--link-color);
+	&:hover {
+		color: var(--link-hover);
+	}
+}
+
+section {
+	margin-bottom: 110px;
+	@include mediaLaptop {
+		margin-bottom: 80px;
+	}
+	@include mediaTablet {
+		margin-bottom: 50px;
+	}
+}
+
+.pt {
+	padding-top: 45px;
+	@include mediaMobile {
+		padding-top: 25px;
+	}
+}

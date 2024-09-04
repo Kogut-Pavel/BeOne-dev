@@ -1,0 +1,114 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 20px;
+	height: 20px;
+}
+
+// иконки в хедере
+
+.icon--heart,
+.icon--cart {
+	stroke: var(--belyy);
+}
+.icon--account {
+	fill: var(--belyy);
+	width: 15px;
+	height: 17px;
+}
+
+.icon--arrow-right-bottom {
+	stroke: var(--belyy);
+	width: 18px;
+	height: 19px;
+	@include mediaLaptop {
+		width: 13px;
+		height: 14px;
+	}
+}
+
+// иконки в карточке
+
+.icon--cart-black {
+	stroke: #000;
+	width: 100%;
+	height: 100%;
+}
+.icon--heart-blue {
+	stroke: #004eb2;
+	width: 100%;
+	height: 100%;
+}
+
+// иконки соц. сетей
+
+.icon--instagram {
+	fill: var(--belyy);
+	width: 100%;
+	height: 100%;
+}
+
+.icon--tiktok {
+	stroke: var(--belyy);
+	width: 100%;
+	height: 100%;
+}
+
+.icon--vkontakte {
+	fill: var(--belyy);
+	width: 100%;
+	height: 100%;
+}
+
+.icon--trash {
+	width: 18px;
+	height: 19px;
+	stroke: var(--belyy);
+}
+
+.icon--ball {
+	width: 88px;
+	height: 87px;
+	fill: var(--belyy);
+}
+
+.for-legal-entities__btn .icon--arrow-right-bottom {
+	width: 12px;
+	height: 12px;
+	stroke: var(--biryuza);
+}
+
+.product__btn-tocart .icon--cart {
+	stroke: var(--belyy);
+	width: 20px;
+	height: 20px;
+}
+
+.product__btn-tofavorite .icon--heart {
+	stroke: var(--linii);
+	width: 23px;
+	height: 23px;
+}
+
+.icon--lock {
+	stroke: var(--belyy);
+    width: 100%;
+    height: 100%;
+    max-width: 22px;
+    max-height: 22px;
+}
+
+
+.icon--hero-slider-arrow-left,
+.icon--hero-slider-arrow-right {
+	fill: #adbdc7;
+	width: 35px;
+	height: 67px;
+	cursor: pointer;
+}

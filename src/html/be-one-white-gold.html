@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span>Каталог товаров</span>
+                <span>Вратарские перчатки</span>
+                <span class="current">BE ONE WHITE GOLD</span>
+            </div>
+        </div>
+
+        <section class="product">
+            <div class="container">
+                <p class="promo-text">Будь первым<br>
+                    вместе с be one</p>
+
+                <div class="product__inner">
+                    <div class="product__image">
+                        <div class="product__image-big">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/be-one-white-gold-big.jpg" alt="#">
+                        </div>
+
+                        <div class="product__image-small">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/be-one-WHITE-GOLD.jpg" alt="#">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/image-2.jpg" alt="#">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/image-3.jpg" alt="#">
+                            <img src="../img/catalog/Be-one-WHITE-GOLD/image-4.jpg" alt="#">
+                            <!-- <img src="../img/empty.svg" alt=""> -->
+                        </div>
+                    </div>
+
+                    <div class="product__info">
+                        <div class="product__header">
+                            <h2 class="product__title">BE ONE WHITE 
+                                GOLD</h2>
+                            <div class="product__price">
+                                <span class="product__price-current">4 990 ₽</span>
+                                <div class="product__price-bottom">
+                                    <span class="product__price-old">5 690 ₽</span>
+                                    <span class="product__price-sale">-30%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product__sizes">
+                            <span>Размеры</span>
+                            <ul>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li class="active">9</li>
+                                <li>10</li>
+                            </ul>
+                        </div>
+
+                        <div class="product__middle">
+                            <div class="counter">
+                                <button type="button" class="counter-btn counter-minus">-</button>
+                                <span class="counter-number">1</span>
+                                <button type="button" class="counter-btn counter-plus">+</button>
+                            </div>
+
+                            <button class="product__btn-tocart">
+                                <svg class="icon icon--cart">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                                </svg>
+                                <span>В корзину</span>
+                            </button>
+
+                            <button class="product__btn-tofavorite">
+                                <svg class="icon icon--heart">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <ul class="product__acc">
+                            <li class="product__acc-item">
+                                <div class="product__acc-item-header">
+                                    <span class="product__acc-title">Информация</span>
+                                    <button></button>
+                                </div>
+                                <div class="product__acc-text">
+                                    <p>Модель BE ONE White Gold, как «вторая кожа» и сверхлегким дизайном была специально разработана для любых погодных условий.</p>
+                                    <p>Благодаря длинной устойчивой манжете и полноразмерному эластичному ремешку, вы ощущаете надежную фиксацию запястья. Обновленный дизайн в золотых и истинно белых тонах, а также два основных фирменных элемента на левой и правой руке делают вратарские перчатки действительно уникальными.</p>
+                                </div>
+                            </li>
+                            <li class="product__acc-item">
+                                <div class="product__acc-item-header">
+                                    <span class="product__acc-title">Состав</span>
+                                    <button></button>
+                                </div>
+                                <div class="product__acc-text">
+                                    <p>
+                                    <span>Бэкхенд</span>: Неопрен Неопрен очень прочен и в то же время остается эластичным и влагоустойчивым при любой погоде.<br>
+                                    <span>Латекс</span>: 4 мм Contact latex + 4 мм подкладка.<br> 
+                                    <span>Крой</span>: Hybrid Negative Hybrid Negative - швы перчаток сделаны вовнутрь. Эти перчатки плотнее всех других сидят на руке. Такие перчатки станут отличным вариантом для женщин-вратарей и для мужчин с узким запястьем.
+                                </p>
+                                </div>
+                            </li>
+                            <li class="product__acc-item">
+                                <div class="product__acc-item-header">
+                                    <span class="product__acc-title">Детали</span>
+                                    <button></button>
+                                </div>
+                                <div class="product__acc-text">
+                                    <p>
+                                        <span>Застежка</span>: эластичная застежка в 1 оборот.<br>
+                                        <span>Защитные вставки</span>: Нет<br>
+                                        <span>Для любых погодных условий.</span><br>
+                                        <span>Комплект поставки</span>: Перчатки всех размеров поставляются в специальной сумочке от BE ONE, а также брелок  вратарская перчатка в подарок
+                                    </p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('blocks/recommendations.html')
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

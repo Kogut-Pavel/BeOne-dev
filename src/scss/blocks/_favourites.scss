@@ -1,0 +1,17 @@
+.favourites {
+    .promo-text {
+        max-width: calc(50% - 10px);
+        margin-left: auto;
+        margin-bottom: 24px;
+        font-size: 18px;
+        @include mediaLaptop {
+            max-width: 100%;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        @include mediaMobile {
+            font-size: 14px;
+            margin: 20px 0 10px 0;
+        }
+    }
+}

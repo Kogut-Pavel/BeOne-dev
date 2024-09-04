@@ -1,0 +1,51 @@
+.title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.title-1 {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 94%;
+    letter-spacing: -0.03em;
+    font-family: var(--second-family);
+    color: var(--belyy);
+    @include media-L-Laptop {
+        font-size: 70px;
+    }
+    @include mediaLaptop {
+        font-size: 50px;
+    }
+    @include mediaTablet {
+        font-size: 64px;
+    }
+    @include mediaMobile {
+        margin-bottom: 15px;
+        font-size: 38px;
+    }
+}
+
+.title-2 {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 94%;
+    letter-spacing: -0.03em;
+
+    color: var(--t-seryy);
+
+    @media (max-width: 1230px) {
+       font-size: 18px;
+    }
+
+}
+
+.title-3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 111%;
+    color: #000;
+}
+
+.title-4 {
+}

@@ -1,0 +1,393 @@
+.contacts .section-header p {
+    display: none;
+
+    @media (max-width: 1180px) {
+        display: block;
+    }
+}
+
+.contacts__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'big-text big-text . .'
+        'links-1 links-2 form form'
+        'text-1 text-2 form form'
+        'media media form form'
+        '. . form form';
+    align-items: start;
+    // gap: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0.5px;
+        height: 100%;
+        background: var(--linii);
+    }
+
+    @media (max-width: 1180px) {
+        grid-template-areas:
+            'form form text-1 text-1'
+            'form form text-2 text-2'
+            'form form . .'
+            'form form media media'
+            'form form links-1 links-2';
+
+        border-top: 1px solid var(--seryy);
+    }
+
+    @include mediaTablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'text-1 text-1'
+            'text-2 text-2'
+            'links-2 links-1'
+            'form form'
+            'media media';
+
+        border: none;
+        &::before {
+            content: none;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+}
+
+.contacts__big-text {
+    padding-bottom: 28px;
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 111%;
+    border-bottom: 1px solid var(--seryy);
+
+    grid-area: big-text;
+
+    @media (max-width: 1180px) {
+        display: none;
+    }
+}
+
+.contacts__links {
+    height: 150px;
+    border-bottom: 1px solid var(--seryy);
+    @media (max-width: 1180px) {
+        border: none;
+    }
+
+    @include mediaTablet {
+        height: auto;
+    }
+    a {
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: var(--svet--biryuzovyy);
+        @include mediaTablet {
+            font-size: 16px;
+        }
+        @include mediaMobile {
+            font-size: 14px;
+        }
+    }
+}
+.links-1 {
+    padding: 10px;
+    padding-left: 0;
+    grid-area: links-1;
+    @media (max-width: 1180px) {
+        padding: 10px;
+    }
+    @include mediaTablet {
+        padding-right: 0;
+        text-align: right;
+    }
+}
+.links-2 {
+    padding: 10px;
+    padding-left: 0;
+    grid-area: links-2;
+    @media (max-width: 1180px) {
+        padding: 10px;
+    }
+    @include mediaTablet {
+        padding-left: 0;
+    }
+}
+.contacts__text {
+    font-family: var(--second-family);
+    min-height: 119px;
+    font-size: 14px;
+    @media (max-width: 1180px) {
+        min-height: auto;
+    }
+}
+.contacts__text.text-1 {
+    padding: 10px;
+    padding-left: 0;
+    grid-area: text-1;
+    @media (max-width: 1180px) {
+        padding: 10px 0 16px 10px;
+        border-bottom: 1px solid var(--seryy);
+    }
+    @include mediaTablet {
+        padding: 0;
+        margin-bottom: 10px;
+        border: none;
+    }
+}
+.contacts__text.text-2 {
+    padding: 10px;
+    grid-area: text-2;
+    @media (max-width: 1180px) {
+        padding: 10px 0 16px 10px;
+    }
+    @include mediaTablet {
+        padding: 0;
+        max-width: 90%;
+        margin-left: auto;
+    }
+}
+.contacts__media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px 0;
+    grid-area: media;
+    border-top: 1px solid var(--seryy);
+    @media (max-width: 1180px) {
+        padding: 10px 10px 0 10px;
+        margin-bottom: 54px;
+    }
+    @include mediaTablet {
+        justify-content: flex-end;
+        border: none;
+        padding: 0 0 0 15px;
+        margin-bottom: 0;
+    }
+    li {
+        width: 26px;
+        height: 26px;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.contacts-form {
+    grid-area: form;
+
+    display: grid;
+    grid-template-areas:
+        'inner inner'
+        'textarea textarea'
+        'checkbox checkbox'
+        'button .';
+
+    @media (max-width: 1180px) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    @include mediaTablet {
+        // padding-left: 15px;
+        // border-left: 1px solid var(--seryy);
+        border-top: 1px solid var(--seryy);
+        padding: 0;
+    }
+}
+
+.contacts-form__inner {
+    position: relative;
+    padding: 10px;
+    padding-right: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    border: 1px solid var(--seryy);
+    border-right: 0;
+
+    grid-area: inner;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background: var(--linii);
+    }
+
+    &::before {
+        top: 0;
+        left: 50.7%;
+        width: 0.5px;
+        height: 100%;
+    }
+
+    &::after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0.5px;
+    }
+
+    @media (max-width: 1180px) {
+        padding: 0;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+    @include mediaTablet {
+        gap: 16px;
+        padding: 14px 0 16px 15px;
+        margin-bottom: 0;
+        border-left: 1px solid var(--seryy);
+    }
+    @include mediaMobile {
+        gap: 10px;
+        padding: 14px 0 10px 15px;
+    }
+}
+
+.contacts-form input {
+    padding: 18px 12px 16px 12px;
+    height: 54px;
+    background: var(--belyy);
+    color: var(--osnovnoy-cvet);
+    @include mediaTablet {
+        padding: 10px;
+        height: 44px;
+    }
+    @include mediaMobile {
+        height: 34px;
+    }
+}
+
+.contacts-form__textarea {
+    min-height: 120px;
+    padding: 10px;
+    padding-right: 0;
+    border-bottom: 1px solid var(--seryy);
+    grid-area: textarea;
+    @media (max-width: 1180px) {
+        padding: 0;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    @include mediaTablet {
+        padding-right: 0;
+        padding-bottom: 14px;
+        padding-left: 15px;
+        border-left: 1px solid var(--seryy);
+    }
+    @include mediaMobile {
+        min-height: 90px;
+    }
+}
+
+.contacts-form input::placeholder,
+.contacts-form__textarea textarea::placeholder {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--linii);
+    @include mediaTablet {
+        font-size: 16px;
+    }
+    @include mediaMobile {
+        font-size: 14px;
+    }
+}
+
+.contacts-form__textarea textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 18px 12px 16px 12px;
+    background: var(--belyy);
+    color: var(--osnovnoy-cvet);
+    @media (max-width: 1180px) {
+        min-height: 120px;
+    }
+    @include mediaTablet {
+        padding: 14px 12px;
+    }
+    @include mediaMobile {
+        padding: 10px 9px;
+        min-height: 90px;
+    }
+}
+
+.contacts-form__checkbox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    grid-area: checkbox;
+    border-bottom: 1px solid var(--seryy);
+
+    @media (max-width: 1180px) {
+        padding: 10px 10px 10px 15px;
+    }
+    @include mediaTablet {
+    }
+    input {
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        font-size: 12px;
+        color: var(--seryy);
+    }
+}
+
+.contacts-form__button-wrapper {
+    padding-top: 10px;
+    padding-left: 10px;
+    grid-area: button;
+    @media (max-width: 1180px) {
+        padding: 10px 10px 0 0;
+    }
+    @include mediaTablet {
+        padding: 10px 10px 0 15px;
+        max-width: 60%;
+        margin-bottom: 20px;
+    }
+}
+
+.contacts-form__button {
+    min-width: 157px;
+    width: auto;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: #000;
+    background: var(--seryy);
+    border: 1px solid var(--seryy);
+    border-radius: 2px;
+    padding: 11px 15px;
+    @include mediaTablet {
+        width: 100%;
+    }
+}

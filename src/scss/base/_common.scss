@@ -1,0 +1,53 @@
+// Шапка секции
+
+// <div class="section-header">
+//     <h2 class="title title-2">/ Каталог товаров</h2>
+//     <p>Воплотите свои мечты вместе с нами</p>
+// </div>
+
+.section-header {
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px;
+    @media (max-width: 1230px) {
+        margin-bottom: 20px;
+    }
+    @include mediaTablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include mediaMobile {
+        margin-bottom: 11px;
+        gap: 13px;
+    }
+}
+
+.section-header p {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--belyy);
+    text-wrap: pretty;
+    @media (max-width: 1230px) {
+        font-size: 25px;
+        letter-spacing: -0.03em;
+    }
+}
+
+// отступы индивидуальны и стилизуются в соответствующих файлах
+.promo-text {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--belyy);
+    @include mediaTablet {
+        font-size: 25px;
+        letter-spacing: -0.03em;
+    }
+}

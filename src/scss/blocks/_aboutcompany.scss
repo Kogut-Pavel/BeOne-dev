@@ -1,0 +1,24 @@
+.aboutcompany__text-img {
+    margin-top: 50px;
+    padding: 16px 0;
+    border-top: 0.5px solid var(--linii);
+    border-bottom: 0.5px solid var(--linii);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include mediaLaptop {
+        margin-top: 36px;
+        padding: 0;
+        border: none;
+    }
+    @include mediaTablet {
+        margin-top: 24px;
+    }
+    @include mediaMobile {
+        margin-top: 15px;
+    }
+}
+
+.aboutcompany__text-img img {
+    width: 100%;
+}

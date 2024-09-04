@@ -1,0 +1,39 @@
+.btn {
+    padding: 11px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--biryuza);
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 111%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy);
+    @include mediaLaptop {
+        font-size: 14px;
+        gap: 6px;
+    }
+}
+
+.btn--link {
+    width: auto;
+    min-width: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--svet--biryuzovyy);
+    border: 1px solid var(--seryy);
+    border-radius: 2px;
+    padding: 11px 15px;
+    &:hover {
+        color: var(--svet--biryuzovyy);
+    }
+}

@@ -1,0 +1,203 @@
+.ourmission__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 15px;
+    @include mediaTablet {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+}
+.ourmission__big-text {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 111%;
+    text-transform: uppercase;
+    @include mediaLaptop {
+        font-size: 25px;
+    }
+}
+.ourmission__text {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 111%;
+    text-transform: uppercase;
+    @include mediaLaptop {
+        font-size: 14px;
+    }
+    @include mediaMobile {
+        display: none;
+    }
+}
+.ourmission__text--mobile {
+    display: none;
+    @include mediaMobile {
+        display: block;
+        &:last-child {
+            margin-left: 15px;
+            color: var(--linii);
+        }
+    }
+}
+
+.ourmission__inner {
+    position: relative;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'text image image image'
+        'text image image image'
+        'text link link link';
+    gap: 20px;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--linii);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 24.5%;
+        width: 0.5px;
+        height: 100%;
+        background: var(--linii);
+    }
+    @include mediaLaptop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'image image'
+            'text text'
+            '. link';
+        gap: 0;
+        &::before {
+            content: none;
+        }
+    }
+    @include mediaMobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'image'
+        'text'
+        'link';
+        border-bottom: 0.5px solid var(--linii);
+    }
+}
+
+.ourmission__image {
+    grid-area: image;
+    img {
+        width: 100%;
+        max-height: 475px;
+        object-fit: cover;
+    }
+    @include mediaLaptop {
+        margin-bottom: 10px;
+    }
+}
+
+.ourmission__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 284px;
+    grid-area: text;
+    @include mediaLaptop {
+        max-width: 100%;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            left: 50%;
+            height: 100%;
+            width: 0.5px;
+            background: var(--linii);
+        }
+    }
+    @include mediaMobile {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 25px;
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.ourmission__text-1,
+.ourmission__text-2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 111%;
+    color: var(--belyy);
+
+    @include mediaLaptop {
+        max-width: 50%;
+        width: 100%;
+        border-bottom: 0.5px solid var(--linii);
+    }
+    @include mediaMobile {
+        max-width: 100%;
+        border-bottom: none;
+    }
+}
+
+.ourmission__text-1 {
+    @include mediaLaptop {
+        padding: 0 10px 10px 0;
+    }
+    @include mediaMobile {
+        padding: 0;
+    }
+}
+
+.ourmission__text-2 {
+    @include mediaLaptop {
+        padding: 0 0 10px 10px;
+    }
+    @include mediaMobile {
+        padding: 0;
+    }
+}
+
+.ourmission__link {
+    grid-area: link;
+
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 111%;
+    text-transform: uppercase;
+    color: var(--svet--biryuzovyy);
+
+    &:hover {
+        svg {
+            stroke: var(--belyy);
+        }
+    }
+
+    @include mediaLaptop {
+        padding: 10px;
+        border-left: 0.5px solid var(--linii);
+    }
+    @include mediaTablet {
+        font-size: 14px;
+    }
+    @include mediaMobile {
+        padding: 0;
+        padding-bottom: 15px;
+        border: none;
+    }
+}

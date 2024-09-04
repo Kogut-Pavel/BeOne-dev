@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+    @@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span>Корзина</span>
+                <span class="current">Оформление заказа</span>
+            </div>
+        </div>
+
+        <section class="order">
+            <div class="container">
+                <h2 class="title title-2">Оформление заказа</h2>
+
+                <div class="order__inner">
+                    <div class="order__left">
+                        <div class="order__new-customer">
+                            <div class="order__new-customer-header block-header">
+                                <div class="order__new-customer-header-left">
+                                    <span>1.</span>
+                                    <div>Я новый покупатель</div>
+                                </div>
+                                <div class="order__haveaccount">У меня уже есть аккаунт</div>
+
+                            </div>
+
+                            <form class="order__new-customer-form">
+                                <div class="order__new-customer-text">
+                                    <svg class="icon icon--lock">
+                                        <use href="./img/svgsprite/sprite.symbol.svg#lock"></use>
+                                    </svg>
+                                    <p>Заполните форму и мы зарегистрируем для вас аккаунт</p>
+                                </div>
+
+                                <input type="text" placeholder="Имя" required>
+                                <input type="text" placeholder="Телефон" required>
+                                <input type="text" placeholder="Адрес" required>
+                                <button type="button" class="">Сохранить</button>
+                            </form>
+                        </div>
+
+                        <div class="order__delivery">
+                            <div class="order__delivery-header block-header">
+                                <span>2.</span>
+                                <div>Информация о доставке</div>
+                            </div>
+
+                            <div class="order__delivery-top-block">
+                                <img src="../img/order/cdek.jpg" alt="#">
+
+                                <div class="order__delivery-city">
+                                    самовывоз в магазине в г. Самара
+                                </div>
+                            </div>
+
+                            <div class="order__delivery-middle-block">
+                                <div class="order__delivery-middle-block-tab">
+                                    <span class="active">Самовывоз</span>
+                                    <span>Курьером</span>
+                                </div>
+                                <div class="order__delivery-point">
+                                    <div>Пункт выдачи СДЭК</div>
+                                    <p>Респ. Чувашская Республика, г. Чебоксары, просп. Максима Горького, д. 34/2</p>
+                                    <span>Срок  доставки - 4-5 дней</span>
+                                </div>
+
+                                <button type="button">Изменить адрес</button>
+                            </div>
+                        </div>
+
+                        <div class="order__pay">
+                            <div class="order__pay-header block-header">
+                                <span>3.</span>
+                                <div>Информация об оплате</div>
+                            </div>
+                            
+                            <form action="#" class="order__pay-form">
+
+                                <div class="order__pay-radioes">
+                                    <label for="radio-1">
+                                        <input type="radio" name="radio" id="radio-1">
+                                        <span>Онлайн картой</span>
+                                    </label>
+                                    <label for="radio-2">
+                                        <input type="radio" name="radio" id="radio-2">
+                                        <span>наложенный платеж (+3%)</span>
+                                    </label>
+                                    <label for="radio-3">
+                                        <input type="radio" name="radio" id="radio-3">
+                                        <span>Перечисление на банковский счет по реквизитам</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="order__pay-card-data">
+                                    <input type="tel" name="cardNumber" placeholder="Номер карты" required>
+                                    <input type="tel" name="date" placeholder="Дата выдачи" required>
+                                    <input type="tel" name="cvv" placeholder="cvv*" required>
+                                </div>
+
+                                <label for="checkbox" class="order__pay-save">
+                                    <input type="checkbox" name="checkbox" id="checkbox">
+                                    <span>Сохранить карту</span>
+                                </label>
+
+                                <button class="order__pay-btn" type="submit">Оплатить</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="order__structure">
+                        <div class="order__structure-header">
+                            Состав заказа
+                        </div>
+
+                        <ul>
+                            <li>
+                                <div class="order__item-image">
+                                    <img src="../img/catalog/Be-one-WHITE-GOLD/be-one-white-gold-big.jpg" alt="#">
+                                </div>
+                                <div class="order__item-info">
+                                    <div class="order__item-title">BE ONE WHITE</div>
+                                    <div class="order__item-info-bottom">
+                                        <div class="order__item-price">4 990 ₽</div>
+                                        <div class="order__item-count">2 шт.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="order__item-image">
+                                    <img src="../img/catalog/BE ONE MONSTER TURQUOISE/WHITE.jpg" alt="#">
+                                </div>
+                                <div class="order__item-info">
+                                    <div class="order__item-title">BE ONE MONSTER TURQUOISE/WHITE
+                                        детские</div>
+                                    <div class="order__item-info-bottom">
+                                        <div class="order__item-price">5 690 ₽</div>
+                                        <div class="order__item-count">1 шт.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="order__structure-footer">
+                            <button type="button" class="order__structure-change">Изменить заказ</button>
+
+                            <div class="order__structure-total">
+                                <span>Итого:</span>
+                                <span class="order__structure-total-number">16 266 р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

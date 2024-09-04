@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+    @@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span>личный кабинет</span>
+                <span class="current">редактирование профиля</span>
+            </div>
+        </div>
+
+        <section class="account">
+            <div class="container">
+                <h2 class="title title-2">редактирование профиля</h2>
+
+                <div class="account__inner">
+                    <div class="account__header">
+                        <span class="account__title">Основные данные</span>
+                        <span>Избранное</span>
+                    </div>
+
+                    <div class="account__data-form">
+                        <div class="account__data-main">
+                            <input type="text" placeholder="ФИО">
+                            <input type="text" placeholder="Телефон">
+                            <input type="text" placeholder="Адрес">
+                        </div>
+                        <div class="account__data-favorite">
+                            <input type="text" placeholder="Дата рождения">
+                            <div class="account__data-favorite-buttons">
+                                <button class="active">Мужчина</button>
+                                <button>Женщина</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account__delivery">
+                        <div class="account__title">
+                            способы доставки
+                        </div>
+    
+                        <div class="order__delivery">
+                            <div class="order__delivery-top-block">
+                                <img src="../img/order/cdek.jpg" alt="#">
+    
+                                <div class="order__delivery-city">
+                                    самовывоз в магазине в г. Самара
+                                </div>
+                            </div>
+    
+                            <div class="order__delivery-middle-block">
+                                <div class="order__delivery-middle-block-tab">
+                                    <span class="active">Самовывоз</span>
+                                    <span>Курьером</span>
+                                </div>
+                                <div class="order__delivery-point">
+                                    <div>Пункт выдачи СДЭК</div>
+                                    <p>Респ. Чувашская Республика, г. Чебоксары, просп. Максима Горького, д. 34/2</p>
+                                    <span>Срок  доставки - 4-5 дней</span>
+                                </div>
+    
+                                <button type="button">Изменить адрес</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account__pay">
+                        <div class="account__title">
+                            способы оплаты
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

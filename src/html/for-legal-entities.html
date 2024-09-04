@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Be one</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="pt">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>Главная</span>
+                <span class="current">Для юридических лиц</span>
+            </div>
+        </div>
+
+        <section class="for-legal-entities">
+            <div class="container">
+                <div class="for-legal-entities__top-text">
+                    <p>оформление заказа по безналичному расчету</p>
+                </div>
+
+                <div class="for-legal-entities__inner">
+                    <div class="for-legal-entities__row">
+                        <div class="for-legal-entities__item for-legal-entities__item-big item-big-01">
+                            <span>01</span>
+                            <p>Выберите необходимые товары и
+                                укажите их количество</p>
+                        </div>
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/image-1.jpg" alt="#">
+                        </div>
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/image-2.jpg" alt="#">
+                        </div>
+                    </div>
+                    <div class="for-legal-entities__row">
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/image-3.jpg" alt="#">
+                        </div>
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/be-one-circle.png" alt="#">
+                        </div>
+                        <div class="for-legal-entities__item for-legal-entities__item-big item-big-02">
+                            <span>02</span>
+                            <p>Отправьте заказ и свои реквизиты
+                                на электронную почту нашей
+                                компании</p>
+                            <a href="mailto:beone_1@yandex.ru">beone_1@yandex.ru</a>
+                            <button type="button" class="for-legal-entities__btn" data-modal="cta">связаться с нами
+                                <svg class="icon icon--arrow-right-bottom">
+                                    <use href="./img/svgsprite/sprite.symbol.svg#arrow-right-bottom"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="for-legal-entities__row">
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/image-4.jpg" alt="#">
+                        </div>
+                        <div class="for-legal-entities__item for-legal-entities__item-big item-big-03">
+                            <span>03</span>
+                            <p>Оплатите счет и мы отгрузим
+                                ваш заказ сразу после поступления 
+                                денег на счет компании be one</p>
+                        </div>
+                        <div class="for-legal-entities__item">
+                            <img src="../img/for-legal-entities/image-5.jpg" alt="#">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="for-legal-entities__btn for-legal-entities__btn--mobile" data-modal="cta">связаться с нами
+                    <svg class="icon icon--arrow-right-bottom">
+                        <use href="./img/svgsprite/sprite.symbol.svg#arrow-right-bottom"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+	</main>
+	@@include('blocks/footer.html')
+    @@include('blocks/modals.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>
