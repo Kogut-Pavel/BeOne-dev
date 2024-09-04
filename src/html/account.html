@@ -32,57 +32,81 @@
                         <span class="account__title">Основные данные</span>
                         <span>Избранное</span>
                     </div>
-
-                    <div class="account__data-form">
-                        <div class="account__data-main">
-                            <input type="text" placeholder="ФИО">
-                            <input type="text" placeholder="Телефон">
-                            <input type="text" placeholder="Адрес">
-                        </div>
-                        <div class="account__data-favorite">
-                            <input type="text" placeholder="Дата рождения">
-                            <div class="account__data-favorite-buttons">
-                                <button class="active">Мужчина</button>
-                                <button>Женщина</button>
+                    <form action="#">
+                        <div class="account__data-form">
+                            <div class="account__data-main">
+                                <input type="text" placeholder="ФИО">
+                                <input type="text" placeholder="Телефон">
+                                <input type="text" placeholder="Адрес">
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="account__delivery">
-                        <div class="account__title">
-                            способы доставки
-                        </div>
-    
-                        <div class="order__delivery">
-                            <div class="order__delivery-top-block">
-                                <img src="../img/order/cdek.jpg" alt="#">
-    
-                                <div class="order__delivery-city">
-                                    самовывоз в магазине в г. Самара
+                            <div class="account__data-favorite">
+                                <input type="text" placeholder="Дата рождения">
+                                <div class="account__data-favorite-buttons">
+                                    <button class="active">Мужчина</button>
+                                    <button>Женщина</button>
                                 </div>
                             </div>
+                        </div>
     
-                            <div class="order__delivery-middle-block">
-                                <div class="order__delivery-middle-block-tab">
-                                    <span class="active">Самовывоз</span>
-                                    <span>Курьером</span>
+                        <div class="account__delivery">
+                            <div class="account__title">
+                                способы доставки
+                            </div>
+        
+                            <div class="order__delivery">
+                                <div class="order__delivery-top-block">
+                                    <img src="../img/order/cdek.jpg" alt="#">
+        
+                                    <div class="order__delivery-city">
+                                        самовывоз в магазине в г. Самара
+                                    </div>
                                 </div>
-                                <div class="order__delivery-point">
-                                    <div>Пункт выдачи СДЭК</div>
-                                    <p>Респ. Чувашская Республика, г. Чебоксары, просп. Максима Горького, д. 34/2</p>
-                                    <span>Срок  доставки - 4-5 дней</span>
+        
+                                <div class="order__delivery-middle-block">
+                                    <div class="order__delivery-middle-block-tab">
+                                        <span class="active">Самовывоз</span>
+                                        <span>Курьером</span>
+                                    </div>
+                                    <div class="order__delivery-point">
+                                        <div>Пункт выдачи СДЭК</div>
+                                        <p>Респ. Чувашская Республика, г. Чебоксары, просп. Максима Горького, д. 34/2</p>
+                                        <span>Срок  доставки - 4-5 дней</span>
+                                    </div>
+        
+                                    <button type="button">Изменить адрес</button>
                                 </div>
-    
-                                <button type="button">Изменить адрес</button>
                             </div>
                         </div>
-                    </div>
+    
+                        <div class="account__pay">
+                            <div class="account__title">
+                                способы оплаты
+                            </div>
+                            <div class="order__pay-form">
+    
+                                <div class="order__pay-radioes">
+                                    <label for="radio-1">
+                                        <input type="radio" name="radio" id="radio-1">
+                                        <span>Онлайн картой</span>
+                                    </label>
+                                    <label for="radio-2">
+                                        <input type="radio" name="radio" id="radio-2">
+                                        <span>Перечисление на банковский счет по реквизитам</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="order__pay-card-data">
+                                    <input type="tel" name="cardNumber" placeholder="Номер карты" required>
+                                    <input type="tel" name="date" placeholder="Дата выдачи" required>
+                                    <input type="tel" name="cvv" placeholder="cvv*" required>
+                                </div>
+    
+                                <button class="order__pay-btn" type="submit">Сохранить</button>
 
-                    <div class="account__pay">
-                        <div class="account__title">
-                            способы оплаты
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                   
                 </div>
             </div>
         </section>
