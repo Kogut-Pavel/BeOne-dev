@@ -11,12 +11,18 @@
     color: var(--belyy);
     border-top: 0.5px solid var(--linii);
     border-bottom: 0.5px solid var(--linii);
+    @include mediaLaptop {
+        margin: 30px 0 15px 0;
+        font-size: 25px;
+    }
+    @include mediaMobile {
+        margin: 25px 0 15px 0;
+        font-size: 18px;
+    }
 }
 
 .account__header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
     span {
         padding-bottom: 15px;
         margin-bottom: 20px;
@@ -27,11 +33,13 @@
         letter-spacing: -0.03em;
         text-transform: uppercase;
         color: var(--belyy);
+        @include mediaLaptop {
+            font-size: 18px;
+        }
         &:first-child {
             border-bottom: 0.5px solid var(--linii);
         }
     }
-
 }
 
 .account__title {
@@ -45,6 +53,9 @@
     text-transform: uppercase;
     color: var(--belyy);
     border-bottom: 0.5px solid var(--linii);
+    @include mediaLaptop {
+        font-size: 18px;
+    }
 }
 
 .account__data-form {
@@ -52,18 +63,35 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 40px;
+    @include mediaLaptop {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    @include mediaTablet {
+        width: 100%;
+    }
+    @include mediaLaptop {
+        gap: 10px;
+    }
 }
 
 .account__data-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include mediaLaptop {
+        gap: 10px;
+    }
 }
 
 .account__data-favorite {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include mediaLaptop {
+        gap: 10px;
+    }
 }
 
 .account__data-main input,
@@ -78,6 +106,9 @@
     line-height: 111%;
     text-transform: uppercase;
     color: var(--biryuza);
+    @include mediaMobile {
+        padding: 15px;
+    }
 }
 
 .account__data-favorite-buttons {
@@ -85,6 +116,12 @@
     align-items: center;
     gap: 20px;
     max-width: calc(50% - 10px);
+    @include mediaLaptop {
+        max-width: 100%;
+    }
+    @include mediaMobile {
+        gap: 10px;
+    }
     button {
         max-width: calc(50% - 10px);
         width: 100%;
@@ -98,6 +135,9 @@
         color: var(--linii);
         background: var(--belyy);
         border: 1px solid var(--belyy);
+        @include mediaLaptop {
+            max-width: calc(50% - 5px);
+        }
         &.active {
             color: var(--biryuza);
             border: 1px solid var(--biryuza);
@@ -108,10 +148,18 @@
 .account__delivery {
     max-width: calc(50% - 10px);
     margin-bottom: 40px;
+    @include mediaLaptop {
+        max-width: 100%;
+    }
 }
-
-
 
 .account__pay {
     max-width: calc(50% - 10px);
+    @include mediaLaptop {
+        max-width: 100%;
+    }
+}
+
+.account .order__pay-form {
+    max-width: 100%;
 }

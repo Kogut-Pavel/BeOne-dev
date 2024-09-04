@@ -269,8 +269,10 @@
     text-transform: uppercase;
     color: var(--linii);
     background: var(--belyy);
-    @include mediaTablet {
+    @include mediaLaptop {
         margin-right: 0;
+    }
+    @include mediaTablet {
         padding: 8px 10px;
     }
 }
@@ -310,8 +312,7 @@
     font-size: 14px;
     line-height: 111%;
     color: #000;
-
-    @include mediaTablet {
+    @include mediaLaptop {
         margin-right: 0;
     }
     @include mediaMobile {
@@ -408,9 +409,11 @@
     margin-bottom: 20px;
     margin-right: 10px;
     gap: 20px;
+    @include mediaLaptop {
+        margin-right: 0;
+    }
     @include mediaTablet {
         gap: 10px;
-        margin-right: 0;
     }
     @include mediaMobile {
         margin-bottom: 10px;
